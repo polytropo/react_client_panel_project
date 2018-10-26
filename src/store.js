@@ -8,12 +8,7 @@ import { reduxFirestore, firestoreReducer } from 'redux-firestore';
 
 // firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyCqK9_2rSgPBxfORmSdy3iirvcnxiplHHk",
-  authDomain: "reactclientpanel-e2e3d.firebaseapp.com",
-  databaseURL: "https://reactclientpanel-e2e3d.firebaseio.com",
-  projectId: "reactclientpanel-e2e3d",
-  storageBucket: "reactclientpanel-e2e3d.appspot.com",
-  messagingSenderId: "1088532330801"
+// Add your info in here!!!
 };
 
 
@@ -26,7 +21,10 @@ const rrfConfig = {
 // init firebase instance
 firebase.initializeApp(firebaseConfig);
 // init firestore
-// const firestore = firebase.firestore();
+const firestore = firebase.firestore();
+const settings = {timestampsInSnapshots: true};
+  firestore.settings(settings);
+
 
 // add reactReduxFirebase enhancer when making store creator
 const createStoreWithFirebase = compose(
