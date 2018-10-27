@@ -1,3 +1,4 @@
+import { firebaseConfigCredentials } from './firebaseConfig';
 import { createStore, combineReducers, compose } from 'redux';
 import firebase from 'firebase';
 import 'firebase/firestore';
@@ -6,10 +7,8 @@ import { reduxFirestore, firestoreReducer } from 'redux-firestore';
 // Reducers
 // @todo
 
-// firebase config
-const firebaseConfig = {
-  // Your firebase details here
-};
+// firebase config --- Enter your own object with firebase credentials here! Mine is in firebaseConfig - obv in ignored git files for security reasons :)
+const firebaseConfig = firebaseConfigCredentials;
 
 
 // react-redux-firebase config
